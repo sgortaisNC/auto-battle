@@ -24,7 +24,7 @@
             <div class="text-center">
                 <h1><?= $me->getNom() ?></h1>
                 <div class="d-flex justify-content-around">
-                    <h2><?= $me->getWeapon()->getNom() ?> <?= $me->getSecondaryWeapon()?->getNom() ?></h2>
+                    <h2><?= $me->getWeapon()->getNom() ?> <?= !is_null($me->getSecondaryWeapon()) ? $me->getSecondaryWeapon()->getNom() : '' ?></h2>
                 </div>
             </div>
         </div>
@@ -32,7 +32,7 @@
             <div class="text-center">
                 <h1><?= $ennemy->getNom() ?></h1>
                 <div class="d-flex justify-content-around">
-                    <h2><?= $ennemy->getWeapon()->getNom() ?> <?= $ennemy->getSecondaryWeapon()?->getNom()?></h2>
+                    <h2><?= $ennemy->getWeapon()->getNom() ?> <?= !is_null($me->getSecondaryWeapon()) ? $me->getSecondaryWeapon()->getNom() : '' ?></h2>
                 </div>
             </div>
         </div>

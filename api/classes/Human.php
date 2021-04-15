@@ -201,7 +201,7 @@ class Human
         return $this;
     }
 
-    #[Pure] function isDead(): bool
+    function isDead(): bool
     {
         return $this->getHp() == 0;
     }
